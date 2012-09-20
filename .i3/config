@@ -181,3 +181,5 @@ assign [title="VIM"] 5: dev
 
 bindsym $mod+d [title="tmux"] focus
 assign [title="tmux -2"] 5: dev
+
+exec_always xmodmap ~/.xmodmap
