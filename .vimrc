@@ -27,6 +27,9 @@ set nocompatible
     Bundle 'less.vim'
     Bundle 'pythoncomplete'
     Bundle 'NrrwRgn'
+    Bundle 'neocomplcache'
+    Bundle 'Markdown'
+    " Bundle 'Markdown-syntax'
     Bundle 'https://github.com/Lokaltog/vim-powerline.git'
     Bundle 'https://github.com/myusuf3/numbers.vim.git'
 
@@ -121,6 +124,8 @@ set nocompatible
     let NERDTreeMinimalUI=1
     map <F3> :NERDTreeToggle<CR>
 
+""" Buffergator
+    map <F4> :BuffergatorToggle<CR>
 
 """ Gundo
     nnoremap <F5> :GundoToggle<CR>
@@ -153,7 +158,7 @@ set nocompatible
 
 
 """ Sort CSS properties
-    nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
+    nmap <F7> :g#\({\n\)\@<=#.,/}/sort<CR>
 
 
 """ Format paragraph
@@ -181,3 +186,23 @@ set nocompatible
 
 """ Open split window with ,w
     nnoremap <leader>w <C-w>v<C-w>l
+
+""" Run things within vim with 'enter'
+    map <C-M> :make<CR>'
+
+""" LaTeX
+    autocmd FileType tex setlocal fileencoding=utf-8
+    autocmd FileType tex setlocal makeprg=pdflatex\ '%'
+    autocmd FileType tex setlocal spell
+    autocmd FileType tex setlocal spelllang=da
+    " make sure vim-latex is loaded if the file is an empty .tex
+    let g:tex_flavor='latex'
+
+""" Omnicompletion
+    autocmd FileType python set omnifunc=pythoncomplete#Complete
+    autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+""" neocomplcache
+let g:neocomplcache_enable_at_startup = 1
