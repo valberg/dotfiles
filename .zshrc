@@ -43,3 +43,6 @@ function git_diff() {
 
 # Enable ghar
 export PATH=$PATH:`pwd`/ghar/bin/
+
+# Enable keychain
+eval `keychain --eval --agents ssh id_rsa`

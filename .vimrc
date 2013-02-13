@@ -7,11 +7,9 @@ set nocompatible
     set rtp+=~/.vim/bundle/vundle/
     call vundle#rc()
 
-    "Bundle 'Command-T'
     Bundle 'ctrlp.vim'
     Bundle 'delimitMate.vim'
     Bundle 'molokai'
-    "Bundle 'clouds_midnight'
     Bundle 'snipMate'
     Bundle 'snipmate-snippets'
     Bundle 'svndiff'
@@ -29,9 +27,10 @@ set nocompatible
     Bundle 'NrrwRgn'
     Bundle 'neocomplcache'
     Bundle 'Markdown'
-    " Bundle 'Markdown-syntax'
+    Bundle 'Python-mode-klen'
     Bundle 'https://github.com/Lokaltog/vim-powerline.git'
     Bundle 'https://github.com/myusuf3/numbers.vim.git'
+    Bundle 'jdonaldson/vaxe'
 
     filetype plugin indent on
 
@@ -111,7 +110,7 @@ set nocompatible
 
 
 """ Save file on lost focus
-    au FocusLost * :wa
+" au FocusLost * :wa
 
 
 """ The_NERD_Tree
@@ -126,6 +125,9 @@ set nocompatible
 
 """ Buffergator
     map <F4> :BuffergatorToggle<CR>
+    let g:buffergator_autoexpand_on_split = 0
+    let g:buffergator_display_regime = "filepath"
+    let g:buffergator_viewport_split_policy = "T"
 
 """ Gundo
     nnoremap <F5> :GundoToggle<CR>
@@ -151,7 +153,7 @@ set nocompatible
 
 """ Strip whitespaces
     nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-
+    autocmd BufWritePre * :%s/\s\+$//e
 
 """ Fold HTML tags
     nnoremap <leader>ft Vatzf
@@ -206,3 +208,12 @@ set nocompatible
 
 """ neocomplcache
 let g:neocomplcache_enable_at_startup = 1
+
+""" GVIM
+set guioptions-=r
+set guioptions-=l
+set guioptions-=L
+set guioptions-=R
+set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 8
+set guioptions-=T
+set guioptions-=m
