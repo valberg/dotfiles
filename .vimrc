@@ -31,6 +31,9 @@ set nocompatible
     Bundle 'https://github.com/Lokaltog/vim-powerline.git'
     Bundle 'https://github.com/myusuf3/numbers.vim.git'
     Bundle 'jdonaldson/vaxe'
+    Bundle 'autotag'
+    Bundle 'Tagbar'
+    Bundle 'Gundo'
 
     filetype plugin indent on
 
@@ -207,7 +210,14 @@ set nocompatible
     autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 """ neocomplcache
-let g:neocomplcache_enable_at_startup = 1
+    let g:neocomplcache_enable_at_startup = 1
+
+""" Tagbar
+    noremap <silent> <F6> :TagbarToggle<CR>
+
+""" Tags
+    " Using <C-_> is a bit easier on the hands
+    nnoremap <C-_> <C-]>
 
 """ GVIM
 set guioptions-=r
