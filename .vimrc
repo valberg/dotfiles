@@ -6,14 +6,13 @@ set nocompatible
 
     set rtp+=~/.vim/bundle/vundle/
     call vundle#rc()
+    Bundle 'gmarik/vundle'
 
     Bundle 'ctrlp.vim'
     Bundle 'delimitMate.vim'
     Bundle 'molokai'
     Bundle 'snipMate'
     Bundle 'snipmate-snippets'
-    Bundle 'svndiff'
-    Bundle 'fugitive.vim'
     Bundle 'The-NERD-Commenter'
     Bundle 'The-NERD-tree'
     Bundle 'ZenCoding.vim'
@@ -28,12 +27,13 @@ set nocompatible
     Bundle 'neocomplcache'
     Bundle 'Markdown'
     Bundle 'Python-mode-klen'
-    Bundle 'https://github.com/Lokaltog/vim-powerline.git'
-    Bundle 'https://github.com/myusuf3/numbers.vim.git'
-    Bundle 'jdonaldson/vaxe'
     Bundle 'autotag'
     Bundle 'Tagbar'
     Bundle 'Gundo'
+    Bundle 'Lokaltog/vim-powerline.git'
+    Bundle 'myusuf3/numbers.vim.git'
+    Bundle 'tpope/vim-fugitive'
+    Bundle 'quickfixsigns'
 
     filetype plugin indent on
 
@@ -131,6 +131,7 @@ set nocompatible
     let g:buffergator_autoexpand_on_split = 0
     let g:buffergator_display_regime = "filepath"
     let g:buffergator_viewport_split_policy = "T"
+    let g:buffergator_split_size = 10
 
 """ Gundo
     nnoremap <F5> :GundoToggle<CR>
