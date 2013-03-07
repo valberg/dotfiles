@@ -16,7 +16,7 @@ set nocompatible
     Bundle 'The-NERD-Commenter'
     Bundle 'The-NERD-tree'
     Bundle 'ZenCoding.vim'
-    Bundle 'Syntastic'
+    Bundle 'scrooloose/syntastic'
     Bundle 'LaTeX-Box'
     Bundle 'vim-coffee-script'
     Bundle 'EasyMotion'
@@ -27,13 +27,17 @@ set nocompatible
     Bundle 'neocomplcache'
     Bundle 'Markdown'
     Bundle 'Python-mode-klen'
-    Bundle 'autotag'
+    Bundle 'AutoTag'
     Bundle 'Tagbar'
     Bundle 'Gundo'
     Bundle 'Lokaltog/vim-powerline.git'
     Bundle 'myusuf3/numbers.vim.git'
     Bundle 'tpope/vim-fugitive'
-    Bundle 'quickfixsigns'
+    Bundle 'airblade/vim-gitgutter'
+    "Bundle 'quickfixsigns'
+
+    Bundle 'Haskell-Cuteness'
+    Bundle 'bitc/vim-hdevtools'
 
     filetype plugin indent on
 
