@@ -1,12 +1,6 @@
 [user]
     name = Víðir Valberg Guðmundsson
-    email = vidir.valberg@gmail.com
-
-[diff]
-    external = git_diff_wrapper
-
-[pager]
-    diff =
+    email = valberg@orn.li
 
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
